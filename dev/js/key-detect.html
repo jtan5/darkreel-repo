@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Detect Keypresses/Keydowns</title>
+</head>
+
+<body>
+	<h1>keyPress</h1>
+	
+	<ul id="kp">
+	</ul>
+	
+	<h1>keyDown</h1>
+	
+	<ul id="kd">
+	</ul>
+	
+	<script>
+		addEvent(document, "keypress", function (e) {
+			e = e || window.event;
+			// use e.keyCode
+			
+			var para = document.createElement("li");                 // Create a <p> element
+			para.innerHTML = 'kp: '+e.keyCode;                // Insert text
+			document.getElementById("kp").appendChild(para); 
+			
+			//console.log('kp: '+e.keyCode);
+		});
+
+		addEvent(document, "keydown", function (e) {
+			e = e || window.event;
+			// use e.keyCode
+			
+			var para = document.createElement("li");                 // Create a <p> element
+			para.innerHTML = 'kd: '+e.keyCode;                // Insert text
+			document.getElementById("kd").appendChild(para); 
+			
+			//console.log('kd: '+e.keyCode);
+		});
+		
+		function addEvent(element, eventName, callback) {
+			if (element.addEventListener) {
+				element.addEventListener(eventName, callback, false);
+			} else if (element.attachEvent) {
+				element.attachEvent("on" + eventName, callback);
+			} else {
+				element["on" + eventName] = callback;
+			}
+		}
+	</script>
+</body>
+</html>

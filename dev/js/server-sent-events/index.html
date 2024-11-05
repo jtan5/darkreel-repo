@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Server Sent Events</title>
+</head>
+
+<body>
+	<ul id="list">
+	</ul>
+	
+	<script>
+		const source = new EventSource("live.php");
+		
+		source.onmessage = (event) => {
+			const newElement = document.createElement("li");
+			const eventList = document.getElementById("list");
+
+			newElement.textContent = event.data;
+			eventList.appendChild(newElement);
+		}
+	</script>
+</body>
+</html>

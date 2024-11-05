@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Element Insert</title>
+</head>
+
+<body>
+	<div id="target_element">
+	
+	</div>
+	
+	<button onclick="insert_input('target_element');">Insert new element</button>
+	
+	<script>
+		function insert_input(target_element) {
+			let the_target = document.querySelector('#'+target_element);
+			
+			let new_item = document.createElement("div"); 
+			
+			//new_item.id = 'feedback_';
+			//new_item.className = 'feedback_';
+			
+			new_item.innerHTML = '<input name="" type="text" value="" placeholder="Enter some text..." onchange="input_changed(this);">'; 
+					
+			the_target.appendChild(new_item);
+		}
+		
+		function input_changed(this_element) {
+			// Get the text when an input changes
+			console.log(this_element.value);
+		}
+	</script>
+</body>
+</html>

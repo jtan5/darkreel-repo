@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert script tag</title>
+</head>
+
+<body>
+    <!-- 
+        This tricks the browser into saying the page has loaded
+        and then loads the JavaScript right after (we can also control
+        the order of how the JS is loaded/executed). 
+
+        This adds small performance improvements but can make a site
+        feel way snappier, along with a lot more control overall
+    -->
+    
+    <script type="text/javascript">
+		function add_script(src, callback) {
+			var s = document.createElement('script');
+			s.setAttribute('src', src);
+			s.onload = callback;
+			document.body.appendChild(s);
+		}
+
+		add_script('template/js/script.js', function () {
+			// Do something after it's loaded
+		});
+	</script>
+</body>
+</html>

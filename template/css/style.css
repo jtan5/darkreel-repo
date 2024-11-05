@@ -1,0 +1,21 @@
+/*
+Customize the look of the site in this file...
+This stylesheet is loaded after absolutely everything else
+*/
+
+:root {
+    --main-hex: #022FB4;
+	--main-hex-a: #022FB4B3;
+	--accent-hex: #17A9FD;
+
+    --panel-hex: #E3E3E3;
+	--border-hex: #000000;
+
+    --success-hex: #48D61A;
+	--error-hex: #EB0C1A;
+
+    --border-radius-input: 3px;
+    --border-radius-panel: 3px;
+
+    --transition-time: .1s;
+}

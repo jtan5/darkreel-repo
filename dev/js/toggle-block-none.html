@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Toggle Display Block/None</title>
+</head>
+
+<body>
+    <h1 id="see_me">Now you see me</h1>
+    
+    <button onclick="toggle_display('see_me', 'flex');">Toggle display</button>
+    
+    <script>
+        function toggle_display(html_id, type_of_display = 'block') {
+            var the_element = document.getElementById(html_id);
+            
+            if (the_element.style.display == 'none') {
+                the_element.style.display = type_of_display;
+            }
+            else {
+                the_element.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

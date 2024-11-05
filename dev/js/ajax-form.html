@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>AJAX Form Submit/Upload</title>
+</head>
+
+<body>
+    <!--
+    SUBMIT FORMS (CAN HANDLE FILE UPLOADS) USING AJAX (NO PAGE REFRESH REQUIRED)
+    Can also verify submissions before allowing form to be submitted
+    -->
+    
+    <form action="something.php" method="post" enctype="multipart/form-data" onsubmit="return AIM.submit(this, {'onStart': aim_start, 'onComplete': aim_complete});">
+        <input name="MAX_UPLOAD_SIZE" type="hidden" value="157286400">
+    </form>    
+        
+    <script type="text/javascript">
+        //
+        AIM = {
+
+            frame : function(c) {
+                //alert('frame');
+                var n = 'ajax_uploads_iframe_' + Math.floor(Math.random() * 99999);
+                var d = document.createElement('DIV');
+                d.innerHTML = '<iframe style="display:none" src="about:blank" id="'+n+'" name="'+n+'" onload="AIM.loaded(\''+n+'\')"></iframe>';
+                document.body.appendChild(d);
+
+                var i = document.getElementById(n);
+                //alert(i);
+                if (c && typeof(c.onComplete) == 'function') {
+                    i.onComplete = c.onComplete;
+                }
+
+                return n;
+            },
+
+            form : function(f, name) {
+                //alert('form');
+                f.setAttribute('target', name);
+            },
+
+            submit : function(f, c) {
+                //alert('submit');
+                AIM.form(f, AIM.frame(c));
+                if (c && typeof(c.onStart) == 'function') {
+                    return c.onStart(f);
+                } else {
+                    return true;
+                }
+            },
+
+            loaded : function(id) {
+                //alert('loaded');
+                var i = document.getElementById(id);
+
+                if (i.contentDocument) {
+                    var d = i.contentDocument;
+                } else if (i.contentWindow) {
+                    var d = i.contentWindow.document;
+                } else {
+                    var d = window.frames[id].document;
+                }
+
+                if (d.location.href == "about:blank") {
+                    return;
+                }
+
+                if (typeof(i.onComplete) == 'function') {
+                    i.onComplete(d.body.innerHTML);
+                }
+            }
+
+        }
+        //
+
+        function aim_start(form_element) {
+            //return false; //If you want to stop the submission
+            return true;
+        }
+
+        function aim_complete(server_response) {
+            
+        }
+    </script>
+</body>
+</html>
