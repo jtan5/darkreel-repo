@@ -2,3 +2,5 @@
 # files here wont be tracked
 
 /libraries/config.local.php
+
+.DS_Store
