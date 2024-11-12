@@ -4,7 +4,7 @@ This stylesheet is loaded after absolutely everything else
 */
 
 :root {
-    --main-hex: #022FB4;
+    --main-hex: #0A0B0B;
 	--main-hex-a: #022FB4B3;
 	--accent-hex: #17A9FD;
 
@@ -20,7 +20,7 @@ This stylesheet is loaded after absolutely everything else
     --transition-time: .1s;
 
 
-    /* Dark Reel  */
+    /* Dark Reel */
     --main-black: #0A0B0B;
     --dark-grey: #232526;
     --mid-grey: #4D5355;
@@ -32,4 +32,32 @@ This stylesheet is loaded after absolutely everything else
 
     --font-fraunces: "Fraunces", serif;
     --font-inter: "Inter", sans-serif;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                             NAVIGATION STYLING                             */
+/* -------------------------------------------------------------------------- */
+header {position: static;
+}
+ul li {
+    display: inline;
+    justify-content: space-around;
+    padding: 0.5em;
+}
+
+ul li a{
+    color: white;
+}
+
+.logo {
+    background: url(../img/logo.svg) center center no-repeat;
+    background-size: cover;
+    width: 3rem;
+    height: 2rem;
+}
+/* -------------------------------------------------------------------------- */
+/*                              MAIN / CONTAINER                              */
+/* -------------------------------------------------------------------------- */
+#container {
+    background-color: var(--main-black);
 }

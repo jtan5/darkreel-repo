@@ -12,8 +12,8 @@ header_remove("X-Powered-By");
 
 
 // Main site details
-$site['name'] = 'ServerSide';
-$site['title'] = 'Share Photos, Follow Friends | '.$site['name'];
+$site['name'] = 'DarkReel';
+$site['title'] = 'Connect with the horror community'.$site['name'];
 
 $site['url_home'] = $site['url'];
 $site['url_search'] = $site['url'].'/search.php?s=';

@@ -20,7 +20,7 @@ error_reporting(E_ALL ^ E_NOTICE);
 
 // Config variables
 $site = [
-    'url' => 'http://localhost:8888/serverside2024',
+    'url' => 'http://localhost:8888/darkreel-repo',
     'env' => 'unix', ## 'unix' or 'windows'
 ];
 
@@ -29,8 +29,8 @@ $site = [
 $mysql = [
     'host'  => 'localhost',
     'port'  => '3306',
-    'db'    => 'ssp2024',
-    'user'  => 'ssp2024',
+    'db'    => 'darkreel_repo',
+    'user'  => 'darkreel_repo',
     'pass'  => 'LdC_P0fmSubK7x82',
 ];
 

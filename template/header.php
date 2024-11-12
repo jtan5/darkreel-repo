@@ -32,23 +32,36 @@ if ($title) {
 <body<?php if (isset($body_css) && $body_css != '') : ?> class="<?php echo $body_class; ?>"<?php endif; ?>>
 	<header>
 		<div class="left">
-			<a href="<?php echo $site['url_home']; ?>" class="logo"><?php echo $site['name']; ?></a>		
-
+			<a href="<?php echo $site['url_home']; ?>" class="logo"></a>		
+		</div>
+		<div class="right">
 			<?php if (is_logged_in()) : ?>
-			<nav>
-				<a href="<?php echo $site['url_home']; ?>">Home</a>
-				<a href="<?php echo $site['url']; ?>/profile.php">Profile</a>
-				<a href="<?php echo $site['url_process']; ?>/do-logout.php">Logout</a>
-			</nav>
+				<nav>
+					<ul>
+						<li><a href="<?php echo $site['url_home']; ?>">Home</a>
+						<!-- TO BE ADDED PHP LATER --></li>
+						<li><a href="#">Films</a></li>
+						<li><a href="#">Community</a></li>
+						<li><a href="<?php echo $site['url']; ?>/profile.php">Profile</a></a>
+						<li>
+						<!-- 
+							I was thinking, maybe logout can be accessed 
+							in the dropdown menu when you click the profile icon?  
+						-->
+							<a href="<?php echo $site['url_process']; ?>/do-logout.php">Logout</a>
+						</li>
+					</ul>
+				</nav>
 			<?php endif; ?>
 		</div>
 		
+<!-- 		
 		<search id="search_box">
-			<form action="<?php echo $site['url']; ?>/search.php" method="get">
+			<form action="</?php echo $site['url']; ?>/search.php" method="get">
 				<input name="s" type="search" placeholder="Search...">
 				<button><i class="fa-solid fa-magnifying-glass"></i></button>
 			</form>
-		</search>
+		</search> -->
 	</header>
 	
 	<div id="container">
