@@ -4,18 +4,16 @@ This stylesheet is loaded after absolutely everything else
 */
 
 :root {
-    --main-hex: #022FB4;
-	--main-hex-a: #022FB4B3;
-	--accent-hex: #17A9FD;
-
-    --panel-hex: #E3E3E3;
-	--border-hex: #000000;
-
-    --success-hex: #48D61A;
-	--error-hex: #EB0C1A;
-
-    --border-radius-input: 3px;
-    --border-radius-panel: 3px;
-
-    --transition-time: .1s;
+    --primary-color: #DE3EA6;
+    --secondary-color: #091416;
+    --neutral-light-0: #D5DBDD;
+    --neutral-light-1: #8B9193;
+    --neutral-light-2: #4D5355;
+    --neutral-mid: #232526;
+    --neutral-dark-0: #020202;
+    --neutral-dark-1: #0A0B0B;
+    --neutral-dark-2: #141516;
+    --text-white: #FFFFFF;
+    --semantic-success: #1E832C;
+    --semantic-error: #B22C32;
 }
