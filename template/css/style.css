@@ -16,4 +16,80 @@ This stylesheet is loaded after absolutely everything else
     --text-white: #FFFFFF;
     --semantic-success: #1E832C;
     --semantic-error: #B22C32;
+    font-size: 16px;
+}
+
+* {
+    font-family: "Fraunces", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    list-style: none;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    border: none;
+}
+
+body {
+    background: url('../BG.png') no-repeat center center fixed;
+    background-size: cover;
+    color: var(--text-white);
+}
+
+.container {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.landingPage-wrapper {
+    display: flex;
+    width: 56.125rem;
+    height: 108.625rem;
+    padding: 0 1.8125rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.625rem;
+    border-right: 0.2rem solid var(--neutral-light-2, #4D5355);
+    border-left: 0.2rem solid var(--neutral-light-2, #4D5355);
+}
+
+.landingPage-wrapper .landingPage-box{
+    border-right: 1px solid var(--neutral-light-2, #4D5355);
+    border-left: 1px solid var(--neutral-light-2, #4D5355);
+    display: flex;
+    padding: 0 3.875rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+
+.landingPage-section-1 h1{
+    margin-bottom: 1rem;
+    font-size: 64px;
+    font-family: "Fraunces", sans-serif;
+    background: linear-gradient(180deg, #D8DDDE 0%, #A4A9AA 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+
+.landingPage-section-1 h1::after{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 3.7rem;
+    width: 44.333375rem;
+    height: 1px;
+    background-color: var(--neutral-light-1);
 }

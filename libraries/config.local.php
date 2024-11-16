@@ -5,7 +5,7 @@
 // track changes in it.
 
 
-/* 
+/*
 !IMPORTANT -- ERROR REPORTING
 Turn off before pushing this site to production
 Turn this on to receive descriptive errors about
@@ -20,7 +20,7 @@ error_reporting(E_ALL ^ E_NOTICE);
 
 // Config variables
 $site = [
-    'url' => 'http://localhost:8888/serverside2024',
+    'url' => 'http://localhost:8888/darkreel',
     'env' => 'unix', ## 'unix' or 'windows'
 ];
 
@@ -29,9 +29,9 @@ $site = [
 $mysql = [
     'host'  => 'localhost',
     'port'  => '3306',
-    'db'    => 'ssp2024',
-    'user'  => 'ssp2024',
-    'pass'  => 'LdC_P0fmSubK7x82',
+    'db'    => 'darkreel',
+    'user'  => 'darkreel',
+    'pass'  => 'bMDGHTD)jR8DGnMm',
 ];
 
 ?>
